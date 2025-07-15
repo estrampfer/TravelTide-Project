@@ -71,7 +71,7 @@ This project is part of the Masterschool Data Analytics Mastery Program. It is s
 ## 📢 Contact
 
 For questions or collaboration:
-**Erik Strampfer**  
+**Erick Strampfer**  
 📧 estrampfer@hotmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/erick-strampfer-monje)
 
