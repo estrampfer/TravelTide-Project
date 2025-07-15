@@ -26,63 +26,52 @@ This project analyzes user behavioral and transactional data to identify segment
 
 ```plaintext
 Traveltide-Project/
-├── data_source/         # Dataset access and documentation
-├── sql_scripts/         # SQL code: CTEs, metrics, segmentation logic
-├── documentation/       # Visualizations, reports, spreadsheets
-├── perks_users.csv      # Final user list with assigned perks
-└── README.md            # Project overview (this file)
+├── data_source/                     # Dataset access and documentation
+├── sql_scripts/                     # SQL code: CTEs, metrics, segmentation logic
+├── documentation/                   # Visualizations, reports, spreadsheets
+├── Users_Based_TravelTide_v7.csv    # Final user list with assigned perks
+└── README.md                        # Project overview (this file)
 ```
 
 ---
 
-## 🧰 Dependencies
+## 🧠 Key Technologies
 
-These are optional Python libraries for users inspecting or analyzing SQL output locally:
-
-```bash
-pandas
-sqlalchemy
-matplotlib
-streamlit
-```
-Install with:
-
-```bash
-pip install -r requirements.txt
-```
+- SQL (BigQuery-compatible syntax)
+- DBeaver for query development
+- Markdown for documentation
+- Tableau Public for visualization
+- Excel for business rule testing
 
 ---
 
-## 📍 Example Usage
+## 🧱 Workflow Summary
 
-**From SQL:**
-```sql
--- Query users eligible for a specific perk\SELECT *
-FROM User_Perks
-WHERE assigned_perk = 'free check bag';
-```
-
-**From Python:**
-```python
-import pandas as pd
-from sqlalchemy import create_engine
-
-# Set up SQL connection
-engine = create_engine('postgresql://user:password@localhost/db')
-
-# Load data into pandas DataFrame
-df = pd.read_sql("SELECT * FROM User_Perks", engine)
-
-# Analyze distribution of perks
-print(df['assigned_perk'].value_counts())
-```
+1. Connect to the Traveltide dataset (see `/data_source`).
+2. Run the main SQL script (`Users_Segmentation_fv` in `/sql_scripts`) to generate the user-level segmentation table.
+3. Export and review the final results in `Users_Based_TravelTide_v7.csv`.
+4. Explore insights and visualizations in `/documentation`.
 
 ---
+
+## 🎯 Output Example
+
+| user_id | age | total_trips | total_revenue | segment        | assigned_perk        |
+|---------|-----|-------------|----------------|----------------|-----------------------|
+| 102938  | 27  | 5           | 800.00         | Young Traveler | Free hotel meal       |
+| 384756  | 64  | 7           | 1200.00        | Senior Voyager | Free checked bag      |
+| 928374  | 35  | 1           | 60.00          | Just Looking   | No perk               |
+
+---
+
+## 📄 License
+
+This project is part of the Masterschool Data Analytics Mastery Program. It is shared for educational purposes only.
 
 ## 📢 Contact
 
 For questions or collaboration:
 **Erik Strampfer**  
-📧 erik@email.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/erikstrampfer/)
+📧 estrampfer@hotmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/erick-strampfer-monje)
 
