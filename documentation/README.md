@@ -7,7 +7,7 @@ This folder contains supporting materials for the Traveltide project including:
 - 📊 Tableau with the graphs and analysis
 - 📈 Executive Summary and Detailed Report in PDF
 - 📋 Excel spreadsheets used to analize the data
-- 🖥️ PDF presentation
+- 🖥️ Power Point presentation
 
 ## 📝 Purpose
 
